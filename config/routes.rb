@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :messages, only: [:destroy]
   resources :channels, only: [:show, :index] do
     resources :messages, only: [:create]
